@@ -1,6 +1,9 @@
 export default {
     title: 'Blade docs',
     description: 'Official Blade documentation.',
+    head: [
+      ['link', {rel: 'icon', href: 'https://bluespirit.collaudo.biz/images/5/24/24/media/images/all/kb/blade@2x.png'}],
+    ],
     themeConfig: {
         logo: 'https://bluespirit.collaudo.biz/images/5/24/24/media/images/all/kb/blade@2x.png',
         nav: [
