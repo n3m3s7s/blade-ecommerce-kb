@@ -6,7 +6,7 @@ hero:
   text: Knowledge base for Blade Ecommerce platform.
   tagline: Suitable for 3rd parties integrations
   image:
-    src: /assets/blade.webp
+    src: https://bluespirit.collaudo.biz/images/5/180/180/media/images/all/kb/blade@2x.png
     alt: VitePress
   actions:
     - theme: brand
