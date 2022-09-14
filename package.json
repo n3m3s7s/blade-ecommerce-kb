@@ -1,0 +1,17 @@
+{
+  "name": "blade-docs",
+  "version": "0.0.2",
+  "description": "Official Blade documentation",
+  "main": "index.js",
+  "author": "Fabio Politi",
+  "license": "MIT",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.0.0-alpha.13",
+    "vue": "^3.2.39"
+  }
+}
