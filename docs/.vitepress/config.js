@@ -25,6 +25,7 @@ export default {
             items: [
               { text: 'Introduction', link: '/frontend/cart-checkout/' },
               { text: 'How it works', link: '/frontend/cart-checkout/how-it-works.md' },
+              { text: 'Context and event labels', link: '/frontend/cart-checkout/context-event.md' },
             ]
           },
           {
