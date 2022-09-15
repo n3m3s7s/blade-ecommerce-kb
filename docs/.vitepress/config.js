@@ -15,7 +15,7 @@ export default {
           {
             text: 'Guide',
             items: [
-              { text: 'Introduction', link: '/' },
+              { text: 'Home', link: '/' },
               { text: 'Getting started', link: '/getting-started' },
               { text: 'Changelog', link: '/changelog' }
             ]

@@ -55,7 +55,7 @@ However, since all the pub/sub flow will go through the same "eventLabel" each t
 
 | <span style="white-space: nowrap">Variable</span> | Description |
 :--------:| -----|
-| context | Current context/scope of the workflow; valid values are ONLY "cart", "checkout" and "order_confirmation" |
+| context | Current context/scope of the workflow; valid values are ONLY "cart", "checkout" |
 | event   | Detailed label of the event that just happened; available and valid values depends on the "context", and are all documented in this guide |
 
 Basically "context" and "event" will always be there to tell You (almost) precisely what kind of event occurred, without registering/subscribe a separate Javascript listener with each event.
@@ -66,9 +66,11 @@ These variables combined can be chained toghether to have a "scoped" description
 Please always check the dedicated page for "context" and "event", to know exactly which they are, how to combine them and if new "events" have been added.
 :::
 
-## A basic JSON payload
+## Payload as a "tree" :evergreen_tree:
 As we told the payload dispatched to the listeners is a monolithic JSON object which contains several informations, divided in sub-objects, which themeselves can be divided in sub-objects too;
 as a result the payload can be viewed (and treated) has a "tree", with a "root" (containing global variables), several "branches" (group of variables or sub-groups, organized for readibility and accessbility) and "leafs" (the variables containing the values to access);
+
+#### Let's see a sample payload:
 
 ```js
 {
@@ -196,8 +198,8 @@ as a result the payload can be viewed (and treated) has a "tree", with a "root" 
             "product_discount": "10.07",
             "product_unitofficial_price": "81.93",
             "product_stock_availability": 102,
-            "product_url": "https://bluespirit-local.collaudo.biz:4433/orologio-cluse-minuit-cl30025-P19499.htm",
-            "product_url_img": "https://bluespirit-local.collaudo.biz:4433/i/default/29770/orologio-cluse-minuit-cl30025.jpg",
+            "product_url": "https://bluespirit.collaudo.biz/orologio-cluse-minuit-cl30025-P19499.htm",
+            "product_url_img": "https://bluespirit.collaudo.biz/i/default/29770/orologio-cluse-minuit-cl30025.jpg",
             "product_qty": 1,
             "product_brand": "Cluse",
             "product_brand_id": 121,
@@ -226,8 +228,8 @@ as a result the payload can be viewed (and treated) has a "tree", with a "root" 
             "product_discount": "0.00",
             "product_unitofficial_price": "360.66",
             "product_stock_availability": 111,
-            "product_url": "https://bluespirit-local.collaudo.biz:4433/orologio-philip-watch-caribe-r8253597037-P57385.htm",
-            "product_url_img": "https://bluespirit-local.collaudo.biz:4433/i/default/79294/orologio-philip-watch-caribe-r8253597037.jpg",
+            "product_url": "https://bluespirit.collaudo.biz/orologio-philip-watch-caribe-r8253597037-P57385.htm",
+            "product_url_img": "https://bluespirit.collaudo.biz/i/default/79294/orologio-philip-watch-caribe-r8253597037.jpg",
             "product_qty": 1,
             "product_brand": "Philip Watch",
             "product_brand_id": 39,
@@ -250,3 +252,49 @@ as a result the payload can be viewed (and treated) has a "tree", with a "root" 
     "event": "paymentChanged"
 }
 ```
+
+As You can see - and this is only a basic example, it does not represents the full payload - the "tree" structure is easily recognizable.
+Basically the only "leafs" available on the first level (root) are only (and always) "context", "event" and "checkout_step", which have been already discussed.
+These variables are very important to understand what is going on, so they will be heavily detailed on the next section.
+
+## Accessing "leafs", "branches" or craft new ones
+However the "tree" structure can be easily traversed with plain vanilla Javascript, and variables (leafs) accessed with "Javascript DOT notation".
+
+For example if we want to "extract" the value of the unique shop code used for the pickup in store we have to select all "branches" and - at last - the "leaf" named "code", such as:
+
+```js
+// getting the value for pickup shop code
+console.log(payload.delivery.pickup_store.code, 'This is the pickup store unique code!');
+> "871" This is the pickup store unique code!
+```
+
+Obviously You are not limited to only export/extract/access "leaf" variables; for example if an entire "branch" (which by definition is a Javascript object) is more suitable for your purpose there is no difference, despite the variable type:
+
+```js
+// getting ALL the key/valuesfor pickup shop
+console.log(payload.delivery.pickup_store, 'This is the pickup store!');
+> {
+    "code": "871",
+    "banner": "BS",
+    "name": "BLUESPIRIT 871 ROMA TERMINI"
+} This is the pickup store!
+```
+
+If you are in the modern frontend world, You certainly know that "destructiring" in Javascript(ES6) is a very powerful tool, and one of the coolest thing it can do is to create a copy of an object, but with a "reduced" set of keys.
+So, for example, if the current shipping address is too "verbose", You can actually reducing it with "object destructiring", such as:
+
+```js
+// cherry-picking keys from the delivery address
+let myAddress = {...{address1, address2, postcode, city} = payload.delivery.address};
+console.log(myAddress, 'This is my reduced shipping address!');
+> {
+    "address1": "VIA FOO BAR",
+    "address2": "40",
+    "postcode": "00052",
+    "city": "CERVETERI",
+} This is my reduced shipping address!
+```
+
+::: tip THATS'IT!
+The rest of this documentation is to give most of the details and eloquent description about **EACH** branch, sub-branch and leaf, in order to properly collect all the informations You need!
+:::

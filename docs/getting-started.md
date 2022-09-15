@@ -10,12 +10,12 @@ In this section You will find every integration, API or SDK available in the fro
 ## Cart & checkout events API
 Complete description for the Javascript events available during a cart/checkout workflow, with full details about JSON payloads crafted by the platform.
 
-[> Read documentation](/frontend/cart-checkout/)
+<span style="font-size: 125%">[:open_book: Open documentation](/frontend/cart-checkout/)</span>
 
 ## Injectable landing pages
 Complete description for the Javascript events available during a cart/checkout workflow, with full details about JSON payloads crafted by the platform.
 
-[> Read documentation](/frontend/landing/)
+<span style="font-size: 125%">[:open_book: Open documentation](/frontend/landing/)</span>
 
 <br /><br />
 # :maple_leaf: Section - Backend
@@ -26,4 +26,4 @@ In this section You will find API specifications and complete collections (with 
 ## Blade Orders and OrderFlows [API] V. 1.1.3
 Blade API exposed for orders, states, labels, customers and several entities.
 
-[> Open postman documentation](https://documenter.getpostman.com/view/7952821/S1a4YSxQ)
+[:open_book: Open postman documentation](https://documenter.getpostman.com/view/7952821/S1a4YSxQ)
