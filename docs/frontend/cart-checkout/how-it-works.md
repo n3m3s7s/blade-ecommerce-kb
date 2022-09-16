@@ -74,182 +74,189 @@ as a result the payload can be viewed (and treated) has a "tree", with a "root" 
 
 ```js
 {
-    "checkout_step": "auth",
-    "payment": {
-        "id": 1,
-        "name": "Paypal",
-        "module": "paypal",
-        "online": 1
+  "context": "cart",
+  "event": "view",
+  "checkout_step": "auth",
+  "attributes": {
+    "id": 298,
+    "lang_id": "it",
+    "availability_mode": "master",
+    "ip": "79.26.211.79",
+    "origin": "desktop",
+    "receipt": null,
+    "currency": {
+      "id": 1,
+      "name": "Euro",
+      "iso_code": "EUR"
     },
-    "carrier": {
-        "id": 4,
-        "name": "Ritiro presso Store Bluespirit",
-        "virtual": 0,
-        "shops_required": 0,
-        "skip_shipping": 0
+    "total": "84.96",
+    "total_cart_discount": "0",
+    "total_discount": "0",
+    "total_taxes": "15.32",
+    "total_products": "539.95",
+    "total_products_real": "84.96",
+    "total_products_discount": "454.99",
+    "total_shipment": "0",
+    "total_payment": "0"
+  },
+  "products": [
+    {
+      "id": 19499,
+      "id_variation": "",
+      "id_context": "19499BS",
+      "sku": "CL30025",
+      "name": "Orologio CLUSE MINUIT - CL30025",
+      "name_variation": "",
+      "unitprice": "69.64",
+      "discount": "10.07",
+      "unitofficial_price": "81.93",
+      "stock_availability": 102,
+      "url": "https://bluespirit.collaudo.biz/orologio-cluse-minuit-cl30025-P19499.htm",
+      "url_img": "https://bluespirit.collaudo.biz/i/default/29770/orologio-cluse-minuit-cl30025.jpg",
+      "qty": 1,
+      "brand": "Cluse",
+      "brand_id": 121,
+      "collection": "Minuit",
+      "collection_id": 1308,
+      "cat1_name": "Orologi",
+      "cat1_id": 1,
+      "cat2_name": "Just time",
+      "cat2_id": 9,
+      "cat3_name": "",
+      "cat3_id": "",
+      "gender": "W",
+      "ispromotion": true,
+      "isnew": 0,
+      "isoutlet": 0,
+      "isoutofprod": 0
     },
-    "delivery": {
-        "country": {
-            "id": 10,
-            "name": "Italia",
-            "iso_code": "IT"
-        },
-        "address": {
-            "firstname": "FABIO",
-            "lastname": "POLITI",
-            "company": "",
-            "address1": "VIA FOO BAR",
-            "address2": "40",
-            "postcode": "00052",
-            "city": "CERVETERI",
-            "phone": "34711222333",
-            "phone_mobile": "34711222333",
-            "fax": null,
-            "vat_number": "PLTFBA83A14K501I",
-            "cf": "PLTFBA83A14K501I",
-            "extrainfo": "f.politi@icoa.it",
-            "country_name": "Italia",
-            "state_name": "Roma"
-        },
-        "pickup_store": {
-            "code": "871",
-            "banner": "BS",
-            "name": "BLUESPIRIT 871 ROMA TERMINI"
-        }
+    {
+      "id": 57385,
+      "id_variation": "",
+      "id_context": "57385BS",
+      "sku": "R8253597037",
+      "name": "OROLOGIO PHILIP WATCH CARIBE - R8253597037",
+      "name_variation": "",
+      "unitprice": "360.66",
+      "discount": "0.00",
+      "unitofficial_price": "360.66",
+      "stock_availability": 111,
+      "url": "https://bluespirit.collaudo.biz/orologio-philip-watch-caribe-r8253597037-P57385.htm",
+      "url_img": "https://bluespirit.collaudo.biz/i/default/79294/orologio-philip-watch-caribe-r8253597037.jpg",
+      "qty": 1,
+      "brand": "Philip Watch",
+      "brand_id": 39,
+      "collection": "Caribe",
+      "collection_id": 1400,
+      "cat1_name": "Orologi",
+      "cat1_id": 1,
+      "cat2_name": "Just time",
+      "cat2_id": 9,
+      "cat3_name": "",
+      "cat3_id": "",
+      "gender": "M",
+      "ispromotion": 0,
+      "isnew": 0,
+      "isoutlet": 0,
+      "isoutofprod": 0
+    }
+  ],
+  "payment": {
+    "id": 1,
+    "name": "Paypal",
+    "module": "paypal",
+    "online": 1
+  },
+  "carrier": {
+    "id": 4,
+    "name": "Ritiro presso Store Bluespirit",
+    "virtual": 0,
+    "shops_required": 0,
+    "skip_shipping": 0
+  },
+  "delivery": {
+    "country": {
+      "id": 10,
+      "name": "Italia",
+      "iso_code": "IT"
     },
-    "billing": {
-        "address": {
-            "firstname": "FABIO",
-            "lastname": "POLITI",
-            "company": "",
-            "address1": "VIA FOO BAR",
-            "address2": "40",
-            "postcode": "00052",
-            "city": "CERVETERI",
-            "phone": "34711222333",
-            "phone_mobile": "34711222333",
-            "fax": null,
-            "vat_number": "PLTFBA83A14K501I",
-            "cf": "PLTFBA83A14K501I",
-            "extrainfo": "f.politi@icoa.it",
-            "country_name": "Italia",
-            "state_name": "Roma"
-        },
-        "invoice_required": false
+    "address": {
+      "firstname": "FABIO",
+      "lastname": "POLITI",
+      "company": "",
+      "address1": "VIA TOLOI",
+      "address2": "40",
+      "postcode": "00052",
+      "city": "CERVETERI",
+      "phone": "3471123000",
+      "phone_mobile": "3471123000",
+      "fax": null,
+      "vat_number": "PLTFBA83A14H501I",
+      "cf": "PLTFBA83A14H501I",
+      "extrainfo": "f.politi@icoa.it",
+      "country_name": "Italia",
+      "state_name": "Roma"
     },
-    "user": {
-        "logged_in": false,
-        "customer": []
+    "pickup_store": {
+      "code": "871",
+      "banner": "BS",
+      "name": "BLUESPIRIT 871 ROMA TERMINI"
+    }
+  },
+  "billing": {
+    "address": {
+      "firstname": "FABIO",
+      "lastname": "POLITI",
+      "company": "",
+      "address1": "VIA TOLOI",
+      "address2": "40",
+      "postcode": "00052",
+      "city": "CERVETERI",
+      "phone": "3471123000",
+      "phone_mobile": "3471123000",
+      "fax": null,
+      "vat_number": "PLTFBA83A14H501I",
+      "cf": "PLTFBA83A14H501I",
+      "extrainfo": "f.politi@icoa.it",
+      "country_name": "Italia",
+      "state_name": "Roma"
     },
-    "engagements": {
-        "campaign": {
-            "id": null,
-            "name": null,
-            "campaign_type": null,
-            "network": null
-        },
-        "coupon": {
-            "code": null,
-            "cart_rule": null
-        },
-        "cart_rules": [
-            {
-                "id": 275,
-                "name": "Test Offer x for y",
-                "reduction": 440
-            }
-        ],
-        "gift_option_selected": false,
-        "extra_service_selected": true,
-        "giftcard": null,
-        "vouchers": []
+    "invoice_required": false
+  },
+  "user": {
+    "logged_in": true,
+    "customer": {
+      "id": 1,
+      "email": "f.politi@icoa.it",
+      "email_hash": "dcf11fbf911e8345d0a1ce4a78b17817",
+      "card_code": "9950002499788",
+      "cdp_identity_tier": "novip",
+      "cdp_identity_id": 1651
+    }
+  },
+  "engagements": {
+    "campaign": {
+      "id": null,
+      "name": null,
+      "campaign_type": null,
+      "network": null
     },
-    "attributes": {
-        "id": 298,
-        "lang_id": "it",
-        "availability_mode": "master",
-        "ip": "79.26.211.79",
-        "origin": "desktop",
-        "receipt": null,
-        "currency": {
-            "id": 1,
-            "name": "Euro",
-            "iso_code": "EUR"
-        },
-        "total": 84.96,
-        "total_cart_discount": 0,
-        "total_discount": 0,
-        "total_taxes": 15.32,
-        "total_products": 539.95,
-        "total_products_real": 84.96,
-        "total_products_discount": 454.99,
-        "total_shipment": 0,
-        "total_payment": 0
+    "coupon": {
+      "code": null,
+      "cart_rule": null
     },
-    "products": [
-        {
-            "product_id": 19499,
-            "product_id_variation": "",
-            "product_id_context": "19499BS",
-            "product_sku": "CL30025",
-            "product_name": "Orologio CLUSE MINUIT - CL30025",
-            "product_name_variation": "",
-            "product_unitprice": "69.64",
-            "product_discount": "10.07",
-            "product_unitofficial_price": "81.93",
-            "product_stock_availability": 102,
-            "product_url": "https://bluespirit.collaudo.biz/orologio-cluse-minuit-cl30025-P19499.htm",
-            "product_url_img": "https://bluespirit.collaudo.biz/i/default/29770/orologio-cluse-minuit-cl30025.jpg",
-            "product_qty": 1,
-            "product_brand": "Cluse",
-            "product_brand_id": 121,
-            "product_collection": "Minuit",
-            "product_collection_id": 1308,
-            "product_cat1_name": "Orologi",
-            "product_cat1_id": 1,
-            "product_cat2_name": "Just time",
-            "product_cat2_id": 9,
-            "product_cat3_name": "",
-            "product_cat3_id": "",
-            "product_gender": "W",
-            "product_ispromotion": true,
-            "product_isnew": 0,
-            "product_isoutlet": 0,
-            "product_isoutofprod": 0
-        },
-        {
-            "product_id": 57385,
-            "product_id_variation": "",
-            "product_id_context": "57385BS",
-            "product_sku": "R8253597037",
-            "product_name": "OROLOGIO PHILIP WATCH CARIBE - R8253597037",
-            "product_name_variation": "",
-            "product_unitprice": "360.66",
-            "product_discount": "0.00",
-            "product_unitofficial_price": "360.66",
-            "product_stock_availability": 111,
-            "product_url": "https://bluespirit.collaudo.biz/orologio-philip-watch-caribe-r8253597037-P57385.htm",
-            "product_url_img": "https://bluespirit.collaudo.biz/i/default/79294/orologio-philip-watch-caribe-r8253597037.jpg",
-            "product_qty": 1,
-            "product_brand": "Philip Watch",
-            "product_brand_id": 39,
-            "product_collection": "Caribe",
-            "product_collection_id": 1400,
-            "product_cat1_name": "Orologi",
-            "product_cat1_id": 1,
-            "product_cat2_name": "Just time",
-            "product_cat2_id": 9,
-            "product_cat3_name": "",
-            "product_cat3_id": "",
-            "product_gender": "M",
-            "product_ispromotion": 0,
-            "product_isnew": 0,
-            "product_isoutlet": 0,
-            "product_isoutofprod": 0
-        }
+    "cart_rules": [
+      {
+        "id": 275,
+        "name": "Test Offer x for y",
+        "reduction": 440
+      }
     ],
-    "context": "cart",
-    "event": "paymentChanged"
+    "gift_option_selected": false,
+    "extra_service_selected": true,
+    "giftcard": null,
+    "vouchers": []
+  }
 }
 ```
 
