@@ -161,18 +161,18 @@ as a result the payload can be viewed (and treated) has a "tree", with a "root" 
       "isoutofprod": 0
     }
   ],
-  "payment": {
-    "id": 1,
-    "name": "Paypal",
-    "module": "paypal",
-    "online": 1
-  },
   "carrier": {
     "id": 4,
     "name": "Ritiro presso Store Bluespirit",
     "virtual": 0,
     "shops_required": 0,
     "skip_shipping": 0
+  },
+  "payment": {
+    "id": 1,
+    "name": "Paypal",
+    "module": "paypal",
+    "online": 1
   },
   "delivery": {
     "country": {

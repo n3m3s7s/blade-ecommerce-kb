@@ -26,6 +26,14 @@ export default {
               { text: 'Introduction', link: '/frontend/cart-checkout/' },
               { text: 'How it works', link: '/frontend/cart-checkout/how-it-works.md' },
               { text: 'Context and event labels', link: '/frontend/cart-checkout/context-event.md' },
+              { text: 'Branch "attributes"', link: '/frontend/cart-checkout/attributes.md' },
+              { text: 'Branch "products"', link: '/frontend/cart-checkout/products.md' },
+              { text: 'Branch "carrier"', link: '/frontend/cart-checkout/carrier.md' },
+              { text: 'Branch "payment"', link: '/frontend/cart-checkout/payment.md' },
+              { text: 'Branch "delivery"', link: '/frontend/cart-checkout/delivery.md' },
+              { text: 'Branch "billing"', link: '/frontend/cart-checkout/billing.md' },
+              { text: 'Branch "user"', link: '/frontend/cart-checkout/user.md' },
+              { text: 'Branch "engagements"', link: '/frontend/cart-checkout/engagements.md' },
             ]
           },
           {
