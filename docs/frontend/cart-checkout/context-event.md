@@ -1,15 +1,36 @@
 # Context and event labels
 As we stated in the previous section, since all the pub/sub flow will go through the bus on the same "eventLabel" each time an internal event will be triggered, the payload itself will be "marked" with three very important variables, available on the root of the tree represented by the JSON payload object.
 
+Let's review an example:
+
+```js{2-4}
+{
+  "context": "cart",
+  "event": "paymentChanged",
+  "checkout_step": "auth",
+  "attributes": {...},
+  "products": [...],
+  "carrier": {...},
+  "payment": {...},
+  "delivery": {...},
+  "billing": {...},
+  "user": {...},
+  "engagements": {...}
+}
+```
+Basically "context" and "event" will always be there to tell You (almost) precisely what kind of event occurred, without registering/subscribe a separate Javascript listener for each event.
+
+These variables combined can be chained toghether to have a "scoped" description, since the "event" variable can (and do) have same values for different contexts (such as "cart.view" => "The cart page is viewed" and "checkout.view" => "The checkout page is viewed");
+
 | <span style="white-space: nowrap; text-align:center">Variable&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> | Description |
 |--------|-----|
 | context | Current context/scope of the workflow; valid values are ONLY "cart", "checkout" |
 | event   | Detailed label of the event that just happened; available and valid values depends on the "context", and are all documented in this guide |
 | checkout_step   | The current "logical step" for the SPA checkout workflow |
 
-Basically "context" and "event" will always be there to tell You (almost) precisely what kind of event occurred, without registering/subscribe a separate Javascript listener for each event.
 
-These variables combined can be chained toghether to have a "scoped" description, since the "event" variable can (and do) have same values for different contexts (such as "cart.view" => "The cart page is viewed" and "checkout.view" => "The checkout page is viewed");
+
+
 
 ## Root variable: "context"
 The entire workflow use only two contexts: "cart" and "checkout";

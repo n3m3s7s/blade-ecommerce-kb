@@ -2,6 +2,7 @@
 
 ## Version: 0.0.4 
 #### _16 September 2022_
+- added highlighted rows into every Payload section
 - created detailed table for "context" variable in "Context and event labels"
 - created detailed table for "event" variable in "Context and event labels"
 - created detailed table for "checkout_step" variable in "Context and event labels"
