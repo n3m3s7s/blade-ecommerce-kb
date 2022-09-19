@@ -1,5 +1,12 @@
 # Changelog
 
+## Version: 0.0.5
+#### _19 September 2022_
+- created detailed table for "billing" branch in "Frontend - Cart/checkout"
+- created detailed table for "delivery" branch in "Frontend - Cart/checkout"
+- created detailed table for "payment" branch in "Frontend - Cart/checkout"
+- created detailed table for "carrier" branch in "Frontend - Cart/checkout"
+
 ## Version: 0.0.4 
 #### _16 September 2022_
 - added highlighted rows into every Payload section
