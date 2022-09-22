@@ -3,7 +3,7 @@ This branch is always an array, and it contains all the products that have been 
 
 Let's review an example:
 
-```js{6-67}
+```js{6-83}
 {
   "context": "...",
   "event": "...",
@@ -32,13 +32,21 @@ Let's review an example:
       "cat1_id": 1,
       "cat2_name": "Just time",
       "cat2_id": 9,
-      "cat3_name": "",
-      "cat3_id": "",
+      "cat3_name": null,
+      "cat3_id": null,
       "gender": "W",
       "ispromotion": true,
-      "isnew": 0,
-      "isoutlet": 0,
-      "isoutofprod": 0
+      "isnew": false,
+      "isoutlet": false,
+      "isoutofprod": false,
+      "isspecial": false,
+      "hasreduction": false,
+      "cart_rule_id": null,
+      "reduction_percent": null,
+      "reduction_amount": null,
+      "availability_mode": "shop",
+      "availability_shop_code": "871",
+      "availability_warehouse": "NG"
     },
     {
       "id": 57385,
@@ -62,13 +70,21 @@ Let's review an example:
       "cat1_id": 1,
       "cat2_name": "Just time",
       "cat2_id": 9,
-      "cat3_name": "",
+      "cat3_name": null,
       "cat3_id": null,
       "gender": "M",
-      "ispromotion": 0,
-      "isnew": 0,
-      "isoutlet": 0,
-      "isoutofprod": 0
+      "ispromotion": false,
+      "isnew": false,
+      "isoutlet": false,
+      "isoutofprod": false,
+      "isspecial": true,
+      "hasreduction": true,
+      "cart_rule_id": 275,
+      "reduction_percent": "100.000",
+      "reduction_amount": "0.000",
+      "availability_mode": "online",
+      "availability_shop_code": null,
+      "availability_warehouse": "01"
     }
   ],
   "carrier": {...},
@@ -105,10 +121,16 @@ Here you can find a detailed description of each variable or sub-branch:
 | <span style="white-space: nowrap;">cat1_id</span> | <span style="white-space: nowrap;">int</span> | Unique Product main category id (not cross-tenant) |
 | <span style="white-space: nowrap;">cat2_name</span> | <span style="white-space: nowrap;">string</span> | Product default category (cross-tenant) |
 | <span style="white-space: nowrap;">cat2_id</span> | <span style="white-space: nowrap;">int</span> | Unique Product default category id (not cross-tenant) |
-| <span style="white-space: nowrap;">cat3_name</span> | <span style="white-space: nowrap;">string</span> | Product sub category (cross-tenant) |
+| <span style="white-space: nowrap;">cat3_name</span> | <span style="white-space: nowrap;">string/null</span> | Product sub category (cross-tenant) |
 | <span style="white-space: nowrap;">cat3_id</span> | <span style="white-space: nowrap;">int/null</span> | Unique Product sub category id (not cross-tenant) |
-| <span style="white-space: nowrap;">gender</span> | <span style="white-space: nowrap;">string</span> | Product category gender code (Man/Woman/Unisex/Child) |
+| <span style="white-space: nowrap;">gender</span> | <span style="white-space: nowrap;">char(1)</span> | Product category gender code:<br>[M]an / [W]oman / [U]nisex / [C]hild |
 | <span style="white-space: nowrap;">ispromotion</span> | <span style="white-space: nowrap;">bool</span> | Product status flag "in promotion" |
 | <span style="white-space: nowrap;">isnew</span> | <span style="white-space: nowrap;">bool</span> | Product status flag "new" |
 | <span style="white-space: nowrap;">isoutlet</span> | <span style="white-space: nowrap;">bool</span> | Product status flag "outlet" |
 | <span style="white-space: nowrap;">isoutofprod</span> | <span style="white-space: nowrap;">bool</span> | Product status flag "out of production" |
+| <span style="white-space: nowrap;">isspecial</span> | <span style="white-space: nowrap;">bool</span> | Product cart status flag "special": this item has been added to the cart by a CartRule |
+| <span style="white-space: nowrap;">hasreduction</span> | <span style="white-space: nowrap;">bool</span> | Product cart status flag "hasreduction": this item is subjected to a reduction by a CartRule |
+| <span style="white-space: nowrap;">cart_rule_id</span> | <span style="white-space: nowrap;">int/null</span> | The inner CartRule applied to this item(s) |
+| <span style="white-space: nowrap;">reduction_percent</span> | <span style="white-space: nowrap;">string/null</span> | Applied reduction is percentual (1-100)% |
+| <span style="white-space: nowrap;">reduction_amount</span> | <span style="white-space: nowrap;">string/null</span> | Applied reduction is a fixed amount |
+| <span style="white-space: nowrap;">availability_mode</span> | <span style="white-space: nowrap;">availability_mode</span> | Product cart given availability mode:<br>"online", "shop", "offline" |

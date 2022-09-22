@@ -3,7 +3,7 @@ The first "branch" of the payload is made of those informations that are relativ
 
 Let's review an example:
 
-```js{5-26}
+```js{5-24}
 {
   "context": "...",
   "event": "...",
@@ -12,14 +12,12 @@ Let's review an example:
     "id": 298,
     "lang_id": "it",
     "availability_mode": "master",
-    "ip": "79.26.211.79",
-    "origin": "desktop",
-    "receipt": null,
     "currency": {
       "id": 1,
       "name": "Euro",
       "iso_code": "EUR"
     },
+    "products_total_qty": 2,
     "total": "84.96",
     "total_cart_discount": "0",
     "total_discount": "0",
@@ -36,7 +34,7 @@ Let's review an example:
   "delivery": {...},
   "billing": {...},
   "user": {...},
-  "engagements": {...}
+  "engagements": {...}[](http://localhost:5173/frontend/cart-checkout/attributes.html#object-currency)
 }
 ```
 ## Variables full details
@@ -47,10 +45,8 @@ Here you can find a detailed description of each variable or sub-branch:
 | <span style="white-space: nowrap;">id</span> | <span style="white-space: nowrap;">int</span> | Current cart session id |
 | <span style="white-space: nowrap;">lang_id</span> | <span style="white-space: nowrap;">string</span> | ISO-CODE of the user language |
 | <span style="white-space: nowrap;">availability_mode</span> | <span style="white-space: nowrap;">string</span> | Internal logic for order splitting |
-| <span style="white-space: nowrap;">ip</span> | <span style="white-space: nowrap;">string</span> | IPv4 or IPv6 internet address of the user |
-| <span style="white-space: nowrap;">origin</span> | <span style="white-space: nowrap;">string</span> | Which device/theme is using the user ("desktop" or "mobile") |
-| <span style="white-space: nowrap;">receipt</span> | <span style="white-space: nowrap;">string/null</span> | In a B2B session it holds the 'receipt' attached by the shop's clerk |
-| <span style="white-space: nowrap;">currency</span> | <span style="white-space: nowrap;">object</span> | The currenct currency object; see ... |
+| <span style="white-space: nowrap;">currency</span> | <span style="white-space: nowrap;">object</span> | The currenct currency object; see <a href="#object-currency">Object: "currency"</a> |
+| <span style="white-space: nowrap;">products_total_qty</span> | <span style="white-space: nowrap;">int</span> | Overall total quantity of items in the cart |
 | <span style="white-space: nowrap;">total</span> | <span style="white-space: nowrap;">string</span> | Final total for the current cart |
 | <span style="white-space: nowrap;">total_cart_discount</span> | <span style="white-space: nowrap;">string</span> | Amount of the "cart_discount" for the current cart |
 | <span style="white-space: nowrap;">total_discount</span> | <span style="white-space: nowrap;">string</span> | Amount of the "discount" for the current cart |

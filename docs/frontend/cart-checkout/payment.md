@@ -16,7 +16,7 @@ Let's review an example:
     "id": 1,
     "name": "Paypal",
     "module": "paypal",
-    "online": 1
+    "online": true
   },
   "delivery": {...},
   "billing": {...},

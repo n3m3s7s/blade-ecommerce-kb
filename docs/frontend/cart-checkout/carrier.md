@@ -14,9 +14,9 @@ Let's review an example:
   "carrier": {
     "id": 4,
     "name": "Ritiro presso Store Bluespirit",
-    "virtual": 0,
-    "shops_required": 0,
-    "skip_shipping": 0
+    "virtual": false,
+    "shops_required": false,
+    "skip_shipping": false
   },
   "payment": {...},
   "delivery": {...},

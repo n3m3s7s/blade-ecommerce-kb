@@ -81,14 +81,12 @@ as a result the payload can be viewed (and treated) has a "tree", with a "root" 
     "id": 298,
     "lang_id": "it",
     "availability_mode": "master",
-    "ip": "79.26.211.79",
-    "origin": "desktop",
-    "receipt": null,
     "currency": {
       "id": 1,
       "name": "Euro",
       "iso_code": "EUR"
     },
+    "products_total_qty": 2,
     "total": "84.96",
     "total_cart_discount": "0",
     "total_discount": "0",
@@ -102,11 +100,11 @@ as a result the payload can be viewed (and treated) has a "tree", with a "root" 
   "products": [
     {
       "id": 19499,
-      "id_variation": "",
+      "id_variation": null,
       "id_context": "19499BS",
       "sku": "CL30025",
       "name": "Orologio CLUSE MINUIT - CL30025",
-      "name_variation": "",
+      "name_variation": null,
       "unitprice": "69.64",
       "discount": "10.07",
       "unitofficial_price": "81.93",
@@ -122,21 +120,29 @@ as a result the payload can be viewed (and treated) has a "tree", with a "root" 
       "cat1_id": 1,
       "cat2_name": "Just time",
       "cat2_id": 9,
-      "cat3_name": "",
-      "cat3_id": "",
+      "cat3_name": null,
+      "cat3_id": null,
       "gender": "W",
       "ispromotion": true,
-      "isnew": 0,
-      "isoutlet": 0,
-      "isoutofprod": 0
+      "isnew": false,
+      "isoutlet": false,
+      "isoutofprod": false,
+      "isspecial": false,
+      "hasreduction": false,
+      "cart_rule_id": null,
+      "reduction_percent": null,
+      "reduction_amount": null,
+      "availability_mode": "shop",
+      "availability_shop_code": "871",
+      "availability_warehouse": "NG"
     },
     {
       "id": 57385,
-      "id_variation": "",
+      "id_variation": null,
       "id_context": "57385BS",
       "sku": "R8253597037",
       "name": "OROLOGIO PHILIP WATCH CARIBE - R8253597037",
-      "name_variation": "",
+      "name_variation": null,
       "unitprice": "360.66",
       "discount": "0.00",
       "unitofficial_price": "360.66",
@@ -152,27 +158,35 @@ as a result the payload can be viewed (and treated) has a "tree", with a "root" 
       "cat1_id": 1,
       "cat2_name": "Just time",
       "cat2_id": 9,
-      "cat3_name": "",
-      "cat3_id": "",
+      "cat3_name": null,
+      "cat3_id": null,
       "gender": "M",
-      "ispromotion": 0,
-      "isnew": 0,
-      "isoutlet": 0,
-      "isoutofprod": 0
+      "ispromotion": false,
+      "isnew": false,
+      "isoutlet": false,
+      "isoutofprod": false,
+      "isspecial": true,
+      "hasreduction": true,
+      "cart_rule_id": 275,
+      "reduction_percent": "100.000",
+      "reduction_amount": "0.000",
+      "availability_mode": "online",
+      "availability_shop_code": null,
+      "availability_warehouse": "01"
     }
   ],
   "carrier": {
     "id": 4,
     "name": "Ritiro presso Store Bluespirit",
-    "virtual": 0,
-    "shops_required": 0,
-    "skip_shipping": 0
+    "virtual": false,
+    "shops_required": false,
+    "skip_shipping": false
   },
   "payment": {
     "id": 1,
     "name": "Paypal",
     "module": "paypal",
-    "online": 1
+    "online": true
   },
   "delivery": {
     "country": {
@@ -224,6 +238,8 @@ as a result the payload can be viewed (and treated) has a "tree", with a "root" 
     "invoice_required": false
   },
   "user": {
+    "ip": "79.26.211.79",
+    "origin": "desktop",
     "logged_in": true,
     "customer": {
       "id": 1,
@@ -236,26 +252,53 @@ as a result the payload can be viewed (and treated) has a "tree", with a "root" 
   },
   "engagements": {
     "campaign": {
-      "id": null,
-      "name": null,
-      "campaign_type": null,
+      "id": 1,
+      "name": "Test campaign",
+      "campaign_type": 4,
       "network": null
     },
     "coupon": {
-      "code": null,
-      "cart_rule": null
+      "code": "22WB00EYKPXPBS",
+      "cart_rule": {
+        "id": 274,
+        "name": "Simple discount 100"
+      }
     },
     "cart_rules": [
       {
+        "id": 274,
+        "name": "Simple discount 100",
+        "reduction": "10.00"
+      },
+      {
         "id": 275,
         "name": "Test Offer x for y",
-        "reduction": 440
+        "reduction": "440.00"
       }
     ],
     "gift_option_selected": false,
     "extra_service_selected": true,
-    "giftcard": null,
-    "vouchers": []
+    "giftcard": {
+      "id": 2,
+      "name": "GIFT CARD 30 €",
+      "code": "R0VHWOMLJ8B9",
+      "customer_name": "FABIO POLITI",
+      "order_id": 128,
+      "product_id": 76029,
+      "amount": "30.00",
+      "original_amount": "30.00",
+      "expires_at": "2022-11-25 15:12:48"
+    },
+    "receipt": null,
+    "vouchers": [
+      {
+        "id": 27,
+        "code": "43D15D4E506F4",
+        "type": "discount_coupon",
+        "amount_type": "fixed",
+        "amount": "10.00"
+      }
+    ]
   }
 }
 ```
