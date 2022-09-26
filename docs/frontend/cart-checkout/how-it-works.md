@@ -338,7 +338,7 @@ So, for example, if the current shipping address is too "verbose", You can actua
 let myAddress = {...{address1, address2, postcode, city} = payload.delivery.address};
 console.log(myAddress, 'This is my reduced shipping address!');
 > {
-    "address1": "VIA FOO BAR",
+    "address1": "VIA TOLOI",
     "address2": "40",
     "postcode": "00052",
     "city": "CERVETERI",

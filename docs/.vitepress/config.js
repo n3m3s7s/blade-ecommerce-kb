@@ -3,6 +3,9 @@ export default {
     description: 'Official Blade documentation.',
     head: [
       ['link', {rel: 'icon', href: 'https://bluespirit.collaudo.biz/images/5/24/24/media/images/all/kb/blade@2x.png'}],
+      ['meta', {'http-equiv': 'cache-control', content: 'no-cache, no-store, must-revalidate'}],
+      ['meta', {'http-equiv': 'pragma', content: 'no-cache'}],
+      ['meta', {'http-equiv': 'expires', content: '0'}],
     ],
     themeConfig: {
         logo: 'https://bluespirit.collaudo.biz/images/5/24/24/media/images/all/kb/blade@2x.png',

@@ -1,6 +1,6 @@
 # Payload branch "delivery"
 
-Under construction...
+In this branch You will find every "entity" that can be related to the "delivery aspect" of the current checkout.
 
 Let's review an example:
 
@@ -49,6 +49,11 @@ Let's review an example:
 ```
 ## Variables full details
 Here you can find a detailed description of each variable or sub-branch:
+| <span style="white-space: nowrap; text-align:center">Var</span> | Type | Description |
+|--------|-----|-----|
+| <span style="white-space: nowrap;">country</span> | <span style="white-space: nowrap;">object</span> | country automatically detected by GEO Ip resolution |
+| <span style="white-space: nowrap;">address</span> | <span style="white-space: nowrap;">object/null</span> | Choosen shipping address (if exists/defined)  |
+| <span style="white-space: nowrap;">pickup_store</span> | <span style="white-space: nowrap;">object/null</span> | Choosen pickup store (if exists/defined)  |
 
 ## Object: "country"
 This object holds informations about the default country automatically detected by GEO Ip resolution, and it is always defined with these variables:
@@ -77,3 +82,11 @@ This object holds informations about a general "address" (both shipping or billi
 | <span style="white-space: nowrap;">extrainfo</span> | <span style="white-space: nowrap;">string/null</span> | Address's additional info |
 | <span style="white-space: nowrap;">country_name</span> | <span style="white-space: nowrap;">string</span> | Address's country name (translated) |
 | <span style="white-space: nowrap;">state_name</span> | <span style="white-space: nowrap;">string</span> | Address's state/province name (translated) |
+
+## Object: "pickup_store"
+This object holds informations about the pickup shop selected by the User, and it is always defined with these variables:
+| <span style="white-space: nowrap; text-align:center">Var</span> | Type | Description |
+|--------|-----|-----|
+| <span style="white-space: nowrap;">code</span> | <span style="white-space: nowrap;">string</span> | Internal shop unique code (cross-tenant) |
+| <span style="white-space: nowrap;">banner</span> | <span style="white-space: nowrap;">string/null</span> | Internal shop banner organization (cross-tenant) |
+| <span style="white-space: nowrap;">name</span> | <span style="white-space: nowrap;">string/null</span> | Shop name |

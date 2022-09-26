@@ -133,4 +133,6 @@ Here you can find a detailed description of each variable or sub-branch:
 | <span style="white-space: nowrap;">cart_rule_id</span> | <span style="white-space: nowrap;">int/null</span> | The inner CartRule applied to this item(s) |
 | <span style="white-space: nowrap;">reduction_percent</span> | <span style="white-space: nowrap;">string/null</span> | Applied reduction is percentual (1-100)% |
 | <span style="white-space: nowrap;">reduction_amount</span> | <span style="white-space: nowrap;">string/null</span> | Applied reduction is a fixed amount |
-| <span style="white-space: nowrap;">availability_mode</span> | <span style="white-space: nowrap;">availability_mode</span> | Product cart given availability mode:<br>"online", "shop", "offline" |
+| <span style="white-space: nowrap;">availability_mode</span> | <span style="white-space: nowrap;">string</span> | Product cart given availability mode:<br>"online", "shop", "offline" |
+| <span style="white-space: nowrap;">availability_shop_code</span> | <span style="white-space: nowrap;">string/null</span> | When item's availability is "shop", this field will host the "shop code" attached to availability stocks:<br>Example: "871", "676", ecc. |
+| <span style="white-space: nowrap;">availability_warehouse</span> | <span style="white-space: nowrap;">string</span> | Internal "warehouse code" attached to availability stocks:<br>Example: "01", "03", "NG", "WM", "W3" |

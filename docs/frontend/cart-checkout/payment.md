@@ -1,6 +1,6 @@
 # Payload branch "payment"
 
-Under construction...
+Every checkout does require a sort of "payment method", which is always inferred in this branch (event special/free purchase without "payments");
 
 Let's review an example:
 

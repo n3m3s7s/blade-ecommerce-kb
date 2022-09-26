@@ -1,5 +1,20 @@
 # Changelog
 
+## Version: 0.0.7
+#### _26 September 2022_
+- added meta http-equiv to VitePress head config
+
+## Version: 0.0.6
+#### _24 September 2022_
+- finished documentation for "engagements" branch in "Frontend - Cart/checkout"
+- finished documentation for "user" branch in "Frontend - Cart/checkout"
+- finished documentation for "products" branch in "Frontend - Cart/checkout"
+- finished documentation for "billing" branch in "Frontend - Cart/checkout"
+- finished documentation for "delivery" branch in "Frontend - Cart/checkout"
+- finished documentation for "payment" branch in "Frontend - Cart/checkout"
+- finished documentation for "carrier" branch in "Frontend - Cart/checkout"
+- finished documentation for "attributes" branch in "Frontend - Cart/checkout"
+
 ## Version: 0.0.5
 #### _19 September 2022_
 - created detailed table for "billing" branch in "Frontend - Cart/checkout"

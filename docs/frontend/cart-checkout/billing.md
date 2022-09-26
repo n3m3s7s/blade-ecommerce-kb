@@ -1,6 +1,6 @@
 # Payload branch "billing"
 
-Under construction...
+Every aspect of the current checkout's "billing side" will be grouped into this branch; please note that some kind of scenarios require a mandatory step, so sometime this entities are not representing general user's choices.
 
 Let's review an example:
 
@@ -42,6 +42,7 @@ Let's review an example:
 Here you can find a detailed description of each variable or sub-branch:
 | <span style="white-space: nowrap; text-align:center">Var</span> | Type | Description |
 |--------|-----|-----|
+| <span style="white-space: nowrap;">address</span> | <span style="white-space: nowrap;">object/null</span> | Choosen billing address (if exists/defined)  |
 | <span style="white-space: nowrap;">invoice_required</span> | <span style="white-space: nowrap;">boolean</span> | Invoice is required for billing |
 
 ## Object: "address"
