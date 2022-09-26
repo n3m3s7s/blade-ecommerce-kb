@@ -4,7 +4,7 @@ As You can see this branch holds information about general data (IP address, dev
 
 Let's review an example:
 
-```js{11-21}
+```js{11-23}
 {
   "context": "...",
   "event": "...",

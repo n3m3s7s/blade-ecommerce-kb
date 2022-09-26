@@ -3,6 +3,14 @@
 ## Version: 0.0.7
 #### _26 September 2022_
 - added meta http-equiv to VitePress head config
+- finished documentation for "engagements" branch in "Frontend - Order confirmation"
+- finished documentation for "user" branch in "Frontend - Order confirmation"
+- finished documentation for "products" branch in "Frontend - Order confirmation"
+- finished documentation for "billing" branch in "Frontend - Order confirmation"
+- finished documentation for "delivery" branch in "Frontend - Order confirmation"
+- finished documentation for "payment" branch in "Frontend - Order confirmation"
+- finished documentation for "carrier" branch in "Frontend - Order confirmation"
+- finished documentation for "attributes" branch in "Frontend - Order confirmation"
 
 ## Version: 0.0.6
 #### _24 September 2022_

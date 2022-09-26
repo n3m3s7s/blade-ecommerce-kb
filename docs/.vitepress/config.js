@@ -26,7 +26,7 @@ export default {
           {
             text: 'Frontend - Cart/checkout',
             items: [
-              { text: 'Introduction', link: '/frontend/cart-checkout/' },
+              { text: 'CC API - Introduction', link: '/frontend/cart-checkout/' },
               { text: 'How it works', link: '/frontend/cart-checkout/how-it-works.md' },
               { text: 'Context and event labels', link: '/frontend/cart-checkout/context-event.md' },
               { text: 'Branch "attributes"', link: '/frontend/cart-checkout/attributes.md' },
@@ -37,6 +37,21 @@ export default {
               { text: 'Branch "billing"', link: '/frontend/cart-checkout/billing.md' },
               { text: 'Branch "user"', link: '/frontend/cart-checkout/user.md' },
               { text: 'Branch "engagements"', link: '/frontend/cart-checkout/engagements.md' },
+            ]
+          },
+          {
+            text: 'Frontend - Order confirm',
+            items: [
+              { text: 'OC API - Introduction', link: '/frontend/order-confirm/' },
+              { text: 'How it works', link: '/frontend/order-confirm/how-it-works.md' },
+              { text: 'Branch "attributes"', link: '/frontend/order-confirm/attributes.md' },
+              { text: 'Branch "products"', link: '/frontend/order-confirm/products.md' },
+              { text: 'Branch "carrier"', link: '/frontend/order-confirm/carrier.md' },
+              { text: 'Branch "payment"', link: '/frontend/order-confirm/payment.md' },
+              { text: 'Branch "delivery"', link: '/frontend/order-confirm/delivery.md' },
+              { text: 'Branch "billing"', link: '/frontend/order-confirm/billing.md' },
+              { text: 'Branch "user"', link: '/frontend/order-confirm/user.md' },
+              { text: 'Branch "engagements"', link: '/frontend/order-confirm/engagements.md' },
             ]
           },
           {

@@ -1,32 +1,27 @@
 # Payload branch "attributes"
-The first "branch" of the payload is made of those informations that are relative to the cart/checkout/purchase only, and for some reason they cannot be easily grouped into other "scoped branch".
+The first "branch" of the payload is made of those informations that are relative to the order confirmation/purchase only, and for some reason they cannot be easily grouped into other "scoped branch".
 
 Let's review an example:
 
-```js{5-24}
-{
-  "context": "...",
-  "event": "...",
-  "checkout_step": "...",
+```js{2-19}
+{  
   "attributes": {
-    "id": 298,
+    "id": 146,
+    "reference": "BSO00298",
+    "cart_id": 298,
     "lang_id": "it",
-    "availability_mode": "master",
+    "availability_mode": "master",    
     "currency": {
       "id": 1,
       "name": "Euro",
       "iso_code": "EUR"
     },
-    "products_total_qty": 2,
-    "total": "84.96",
-    "total_cart_discount": "0",
-    "total_discount": "0",
-    "total_taxes": "15.32",
-    "total_products": "539.95",
-    "total_products_real": "84.96",
-    "total_products_discount": "454.99",
-    "total_shipment": "0",
-    "total_payment": "0"
+    "total": "34.96",
+    "total_discount": "10.00",
+    "total_taxes": "6.30",
+    "total_products": "84.96",
+    "total_shipment": "0.00",
+    "total_payment": "0.00"
   },
   "products": [...],
   "carrier": {...},
@@ -43,17 +38,16 @@ Here you can find a detailed description of each variable or sub-branch:
 | <span style="white-space: nowrap; text-align:center">Var</span> | Type | Description |
 |--------|-----|-----|
 | <span style="white-space: nowrap;">id</span> | <span style="white-space: nowrap;">int</span> | Current cart session id |
+| <span style="white-space: nowrap;">reference</span> | <span style="white-space: nowrap;">string</span> | Internal unique order reference/code |
+| <span style="white-space: nowrap;">cart_id</span> | <span style="white-space: nowrap;">int</span> | Internal unique cart ID which caused this order |
 | <span style="white-space: nowrap;">lang_id</span> | <span style="white-space: nowrap;">string</span> | ISO-CODE of the user language |
 | <span style="white-space: nowrap;">availability_mode</span> | <span style="white-space: nowrap;">string</span> | Internal logic for order splitting |
 | <span style="white-space: nowrap;">currency</span> | <span style="white-space: nowrap;">object</span> | The currenct currency object;<br>see <a href="#object-currency">Object: "currency"</a> |
-| <span style="white-space: nowrap;">products_total_qty</span> | <span style="white-space: nowrap;">int</span> | Overall total quantity of items in the cart |
 | <span style="white-space: nowrap;">total</span> | <span style="white-space: nowrap;">string</span> | Final total for the current cart |
 | <span style="white-space: nowrap;">total_cart_discount</span> | <span style="white-space: nowrap;">string</span> | Amount of the "cart_discount" for the current cart |
 | <span style="white-space: nowrap;">total_discount</span> | <span style="white-space: nowrap;">string</span> | Amount of the "discount" for the current cart |
 | <span style="white-space: nowrap;">total_taxes</span> | <span style="white-space: nowrap;">string</span> | Total taxes for the current cart |
 | <span style="white-space: nowrap;">total_products</span> | <span style="white-space: nowrap;">string</span> | Total for all products (without reductions) |
-| <span style="white-space: nowrap;">total_products_real</span> | <span style="white-space: nowrap;">string</span> | Total for all products (reductions applied) |
-| <span style="white-space: nowrap;">total_products_discount</span> | <span style="white-space: nowrap;">string</span> | Total reduction applied to products |
 | <span style="white-space: nowrap;">total_shipment</span> | <span style="white-space: nowrap;">string</span> | Shipment extra charge |
 | <span style="white-space: nowrap;">total_payment</span> | <span style="white-space: nowrap;">string</span> | Payment extra charge |
 
