@@ -1,6 +1,6 @@
 # Payload branch "carrier"
 
-This branc contains general informations about the "carrier" or "courier" choosed by the User or automatically selected by the business logic;
+This branch contains general informations about the "carrier" or "courier" choosed by the User or automatically selected by the business logic;
 
 Let's review an example:
 
