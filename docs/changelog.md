@@ -1,5 +1,9 @@
 # Changelog
 
+## Version: 0.0.8
+#### _27 September 2022_
+- added new "event" after successfull user registration in "Frontend - Cart/checkout - Context and event labels"
+
 ## Version: 0.0.7
 #### _26 September 2022_
 - added meta http-equiv to VitePress head config

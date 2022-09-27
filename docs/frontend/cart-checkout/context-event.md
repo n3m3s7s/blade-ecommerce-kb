@@ -84,6 +84,7 @@ As a result this is the part of the implementation where You have to know exactl
 | <span style="white-space: nowrap;">showLogin</span> | The embedded login form has been showed |
 | <span style="white-space: nowrap;">showRegister</span> | The embedded register form has been showed |
 | <span style="white-space: nowrap;">userLogged</span> | The user has successfully logged-in |
+| <span style="white-space: nowrap;">userRegistered</span> | The user has been successfully registered |
 | <span style="white-space: nowrap;">shippingAddressSaved</span> | A shipping address has been created or updated |
 | <span style="white-space: nowrap;">shippingAddressChanged</span> | User has selected a different shipping address |
 | <span style="white-space: nowrap;">billingAddressSaved</span> | A billing address has been created or updated |
