@@ -55,6 +55,16 @@ export default {
             ]
           },
           {
+            text: 'Frontend - General events',
+            items: [
+              { text: 'Events - Introduction', link: '/frontend/bus-events/' },
+              { text: 'How it works', link: '/frontend/bus-events/how-it-works.md' },              
+              { text: 'Scope "products"', link: '/frontend/bus-events/products.md' },
+              { text: 'Scope "wishlists"', link: '/frontend/bus-events/wishlists.md' },
+              { text: 'Scope "users"', link: '/frontend/bus-events/users.md' },
+            ]
+          },
+          {
             text: 'Frontend - Landing pages',
             items: [
               { text: 'Introduction', link: '/frontend/landing/' },

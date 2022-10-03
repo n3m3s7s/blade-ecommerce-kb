@@ -1,5 +1,12 @@
 # Changelog
 
+## Version: 0.0.9
+#### _03 October 2022_
+- first draft for "products" in "Frontend - General events"
+- first draft for "wishlists" in "Frontend - General events"
+- first draft for "users" in "Frontend - General events"
+- added new section "Frontend - General events"
+
 ## Version: 0.0.8
 #### _27 September 2022_
 - added new "event" after successfull user registration in "Frontend - Cart/checkout - Context and event labels"

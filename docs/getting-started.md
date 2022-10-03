@@ -17,6 +17,11 @@ Complete description for the Javascript events available during a purchase/order
 
 <span style="font-size: 125%">[:open_book: Open documentation](/frontend/order-confirm/)</span>
 
+## General events API
+Complete description for the Javascript events available during general events triggered by any frontend theme, with full details about JSON payloads crafted by the platform.
+
+<span style="font-size: 125%">[:open_book: Open documentation](/frontend/bus-events/)</span>
+
 ## Injectable landing pages
 Complete description for the Javascript events available during a cart/checkout workflow, with full details about JSON payloads crafted by the platform.
 
