@@ -14,7 +14,7 @@ So, You have to "subscribe" to the event bus for the event marked as "onXXX", wh
 
 This is an example on how you can easily make the subscription, regardless of the tool used and the "async" loading of the frontend.
 
-```js{4-16}
+```js{3-16}
 var generalEventSubscriber = function () {
     try {
         Shared.listeners({

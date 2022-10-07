@@ -1,5 +1,11 @@
 # Changelog
 
+## Version: 0.1.0
+#### _07 October 2022_
+- added basic documentation for "products" in "Frontend - General events"
+- added basic documentation for "wishlists" in "Frontend - General events"
+- added basic documentation for "users" in "Frontend - General events"
+
 ## Version: 0.0.9
 #### _03 October 2022_
 - first draft for "products" in "Frontend - General events"
