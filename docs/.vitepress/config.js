@@ -65,6 +65,14 @@ export default {
             ]
           },
           {
+            text: 'Backend - i18n UI',
+            items: [
+              { text: 'Introduction', link: '/backend/i18n/' },
+              { text: 'Web App - Account', link: '/backend/i18n/app-account.md' },
+              { text: 'Web App - Usage', link: '/backend/i18n/app-usage.md' },
+            ]
+          },
+          {
             text: 'Frontend - Landing pages',
             items: [
               { text: 'Introduction', link: '/frontend/landing/' },
