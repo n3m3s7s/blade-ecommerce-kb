@@ -62,6 +62,8 @@ export default {
               { text: 'Scope "products"', link: '/frontend/bus-events/products.md' },
               { text: 'Scope "wishlists"', link: '/frontend/bus-events/wishlists.md' },
               { text: 'Scope "users"', link: '/frontend/bus-events/users.md' },
+              { text: 'Scope "promotions"', link: '/frontend/bus-events/promotions.md' },
+              { text: 'Scope "algolia"', link: '/frontend/bus-events/algolia.md' },
             ]
           },
           {

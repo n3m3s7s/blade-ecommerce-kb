@@ -14,7 +14,7 @@ So, You have to "subscribe" to the event bus for the event marked as "onXXX", wh
 
 This is an example on how you can easily make the subscription, regardless of the tool used and the "async" loading of the frontend.
 
-```js{3-16}
+```js{3-64}
 var generalEventSubscriber = function () {
     try {
         Shared.listeners({
@@ -29,6 +29,54 @@ var generalEventSubscriber = function () {
             'onCartDelete': function (payload) {
                 //make something with the payload or traverse it
                 console.log(payload, 'Blade.onCartDelete');
+            },
+            'onProductClick': function (payload) {
+                //make something with the payload or traverse it
+                console.log(payload, 'Blade.onProductClick');
+            },
+            'onProductImpression': function (payload) {
+                //make something with the payload or traverse it
+                console.log(payload, 'Blade.onProductImpression');
+            },
+            'onAllProductImpression': function (payload) {
+                //make something with the payload or traverse it
+                console.log(payload, 'Blade.onAllProductImpression');
+            },
+            'onWishlistAdd': function (payload) {
+                //make something with the payload or traverse it
+                console.log(payload, 'Blade.onWishlistAdd');
+            },
+            'onWishlistRemove': function (payload) {
+                //make something with the payload or traverse it
+                console.log(payload, 'Blade.onWishlistRemove');
+            },
+            'onUserLogin': function (payload) {
+                //make something with the payload or traverse it
+                console.log(payload, 'Blade.onUserLogin');
+            },
+            'onUserLogout': function (payload) {
+                //make something with the payload or traverse it
+                console.log(payload, 'Blade.onUserLogout');
+            },
+            'onPromoImpression': function (payload) {
+                //make something with the payload or traverse it
+                console.log(payload, 'Blade.onPromoImpression');
+            },
+            'onPromoClick': function (payload) {
+                //make something with the payload or traverse it
+                console.log(payload, 'Blade.onPromoClick');
+            },
+            'onAlgoliaSetup': function (payload) {
+                //make something with the payload or traverse it
+                console.log(payload, 'Blade.onAlgoliaSetup');
+            },
+            'onAlgoliaInstantSearch': function (payload) {
+                //make something with the payload or traverse it
+                console.log(payload, 'Blade.onAlgoliaInstantSearch');
+            },
+            'onAlgoliaEvent': function (payload) {
+                //make something with the payload or traverse it
+                console.log(payload, 'Blade.onAlgoliaEvent');
             }
         });
     } catch (e) {

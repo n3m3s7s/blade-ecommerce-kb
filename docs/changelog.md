@@ -1,5 +1,17 @@
 # Changelog
 
+## Version: 0.2.2
+#### _06 September 2024_
+- added basic documentation for "algolia" in "Frontend - General events"
+
+## Version: 0.2.1
+#### _01 August 2024_
+- added basic documentation for "promotions" in "Frontend - General events"
+
+## Version: 0.2.0
+#### _11 May 2023_
+- added a whole new documentation block for "Backend - i18n UI"
+
 ## Version: 0.1.0
 #### _07 October 2022_
 - added basic documentation for "products" in "Frontend - General events"

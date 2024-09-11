@@ -76,17 +76,118 @@ Here you can find a detailed description of each variable or sub-branch:
 | <span style="white-space: nowrap;">product_isnew</span> | <span style="white-space: nowrap;">int(1)</span> | Product status flag "new" |
 | <span style="white-space: nowrap;">product_isoutlet</span> | <span style="white-space: nowrap;">int(1)</span> | Product status flag "outlet" |
 | <span style="white-space: nowrap;">product_isoutofprod</span> | <span style="white-space: nowrap;">int(1)</span> | Product status flag "out-of-production" |
+| <span style="white-space: nowrap;">list</span> | <span style="white-space: nowrap;">string/null</span> | Define the actual catalogue listing page, and can be filled with several strategies (for example a brand or a category name); <b>Important:</b> when the page is the search's result page submitted by a user, this variable will always be equal to "search-results" |
 
 ## onCartUpdate
 Fired whenever a "product" (or a "variant", or a "combination") is updated in the current cart.
 
-::: tip YOU KNOW IT!
+::: tip PLEASE REMEMBER:
 In order to be consistent the payload is identical to the one detailed in the <a href="/frontend/bus-events/products.html#variables-full-details">onCartAdd - Variables full details</a> section.
 :::
 
 ## onCartDelete
 Fired whenever a "product" (or a "variant", or a "combination") is removed/deleted from the current cart.
 
-::: tip YOU KNOW IT!
+::: tip PLEASE REMEMBER:
 In order to be consistent the payload is identical to the one detailed in the <a href="/frontend/bus-events/products.html#variables-full-details">onCartAdd - Variables full details</a> section.
 :::
+
+## onProductClick
+Fired whenever a "product" is clicked from the current catalogue's page or from a carousel (for example in a product's details page).
+
+::: tip PLEASE REMEMBER:
+In order to be consistent the payload is identical to the one detailed in the <a href="/frontend/bus-events/products.html#variables-full-details">onCartAdd - Variables full details</a> section.
+:::
+
+## onProductImpression
+Fired whenever a "product" is rendered/showed into the current catalogue's page or in a carousel (for example in a product's details page).
+
+::: tip PLEASE REMEMBER:
+In order to be consistent the payload is identical to the one detailed in the <a href="/frontend/bus-events/products.html#variables-full-details">onCartAdd - Variables full details</a> section.
+:::
+
+::: warning IMPORTANT:
+Actual firing of this (single) event could be overwritten by the "bulk" version, where an array of "products" are fires in a single event (please refer to the next block below).
+:::
+
+
+## onAllProductImpression
+Fired whenever a "product" is rendered/showed into the current catalogue's page or in a carousel (for example in a product's details page).
+
+::: warning IMPORTANT:
+The payload is an object with a single property named "impressions_array", which is an array of standard "product" objects;
+:::
+
+::: tip PLEASE REMEMBER:
+In order to be consistent the payload is identical to the one detailed in the <a href="/frontend/bus-events/products.html#variables-full-details">onCartAdd - Variables full details</a> section.
+:::
+
+Let's see an example:
+
+```js
+{
+  "impressions_array": [
+    {
+      "product_id": 56400, 
+      "product_id_variation": "", 
+      "product_id_context": "56400BS", 
+      "product_sku": "R8853121004", 
+      "product_name": "Orologio Maserati Successo - R8853121004", 
+      "product_name_variation": "", 
+      "product_unitprice": "103.81", 
+      "product_discount": "15.02", 
+      "product_unitofficial_price": "122.13", 
+      "product_stock_availability": 330, 
+      "product_url": "https://www.bluespirit.com/orologio-maserati-successo-r8853121004-P56400.htm", 
+      "product_url_img": "https://www.bluespirit.com/i/default/73228/orologio-maserati-successo-r8853121004.jpg", 
+      "product_qty": 1, 
+      "product_brand": "Maserati", 
+      "product_brand_id": 122, 
+      "product_collection": "Successo", 
+      "product_collection_id": 1365, 
+      "product_cat1_name": "Orologi", 
+      "product_cat1_id": 1, 
+      "product_cat2_name": "Just time", 
+      "product_cat2_id": 9, 
+      "product_cat3_name": "", 
+      "product_cat3_id": "", 
+      "product_gender": "M", 
+      "product_ispromotion": true, 
+      "product_isnew": 0, 
+      "product_isoutlet": 0, 
+      "product_isoutofprod": 0, 
+      "list": null 
+    },
+    {
+      "product_id": 56400, 
+      "product_id_variation": "", 
+      "product_id_context": "56400BS", 
+      "product_sku": "R8853121004", 
+      "product_name": "Orologio Maserati Successo - R8853121004", 
+      "product_name_variation": "", 
+      "product_unitprice": "103.81", 
+      "product_discount": "15.02", 
+      "product_unitofficial_price": "122.13", 
+      "product_stock_availability": 330, 
+      "product_url": "https://www.bluespirit.com/orologio-maserati-successo-r8853121004-P56400.htm", 
+      "product_url_img": "https://www.bluespirit.com/i/default/73228/orologio-maserati-successo-r8853121004.jpg", 
+      "product_qty": 1, 
+      "product_brand": "Maserati", 
+      "product_brand_id": 122, 
+      "product_collection": "Successo", 
+      "product_collection_id": 1365, 
+      "product_cat1_name": "Orologi", 
+      "product_cat1_id": 1, 
+      "product_cat2_name": "Just time", 
+      "product_cat2_id": 9, 
+      "product_cat3_name": "", 
+      "product_cat3_id": "", 
+      "product_gender": "M", 
+      "product_ispromotion": true, 
+      "product_isnew": 0, 
+      "product_isoutlet": 0, 
+      "product_isoutofprod": 0, 
+      "list": null 
+    }
+]}
+```
