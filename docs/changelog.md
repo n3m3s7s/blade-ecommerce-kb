@@ -1,8 +1,14 @@
 # Changelog
 
-## Version: 0.2.2
+## Version: 0.2.3
 #### _06 September 2024_
-- added basic documentation for "algolia" in "Frontend - General events"
+- added full and extended documentation for "algolia" in "Frontend - General events"
+
+## Version: 0.2.2
+#### _05 September 2024_
+- added documentation for "product.onProductClick" in "Frontend - General events"
+- added documentation for "product.onProductImpression" in "Frontend - General events"
+- added documentation for "product.onAllProductImpression" in "Frontend - General events"
 
 ## Version: 0.2.1
 #### _01 August 2024_

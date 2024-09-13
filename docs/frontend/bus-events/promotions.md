@@ -30,10 +30,8 @@ Let's see an example:
 
 ```js
 {
-    success: true, 
-    msg: 'Disconnessione avvenuta con successo; attendere il redirect automatico',
-    redirect: null, 
-    customer_id: 1
+    "id": "PROMO_1234",
+    "name": 'BlackFriday 2024 sales'
 }
 ```
 
