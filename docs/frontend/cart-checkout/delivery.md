@@ -4,7 +4,7 @@ In this branch You will find every "entity" that can be related to the "delivery
 
 Let's review an example:
 
-```js{9-37}
+```js{9-39}
 {
   "context": "...",
   "event": "...",
@@ -40,7 +40,10 @@ Let's review an example:
       "code": "871",
       "banner": "BS",
       "name": "BLUESPIRIT 871 ROMA TERMINI"
-    }
+    },
+    "is_cnc": true,
+    "is_cnc_2h": true,
+    "is_b2b": false
   },
   "billing": {...},
   "user": {...},
@@ -90,3 +93,11 @@ This object holds informations about the pickup shop selected by the User, and i
 | <span style="white-space: nowrap;">code</span> | <span style="white-space: nowrap;">string</span> | Internal shop unique code (cross-tenant) |
 | <span style="white-space: nowrap;">banner</span> | <span style="white-space: nowrap;">string/null</span> | Internal shop banner organization (cross-tenant) |
 | <span style="white-space: nowrap;">name</span> | <span style="white-space: nowrap;">string/null</span> | Shop name |
+
+
+## Other variables
+| <span style="white-space: nowrap; text-align:center">Var</span> | Type | Description |
+|--------|-----|-----|
+| <span style="white-space: nowrap;">is_cnc</span> | <span style="white-space: nowrap;">bool</span> | Click-n-collect enabled/disabled |
+| <span style="white-space: nowrap;">is_cnc_2h</span> | <span style="white-space: nowrap;">bool</span> | Click-n-collect in 2H enabled/disabled |
+| <span style="white-space: nowrap;">is_b2b</span> | <span style="white-space: nowrap;">bool</span> | The order has been places by a Shop session (B2B) |
