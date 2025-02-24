@@ -1,5 +1,9 @@
 # Changelog
 
+## Version: 0.2.4
+#### _09 January 2025_
+- added 3 booleans for "delivery" in "Frontend - Cart/Checkout" and "Frontend - Order confirm"
+
 ## Version: 0.2.3
 #### _06 September 2024_
 - added full and extended documentation for "algolia" in "Frontend - General events"
